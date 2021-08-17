@@ -7,7 +7,7 @@
 
 <p>
   <strong>Portrait:</strong>
-  <%= @user.portrait %>
+  <%= link_to @user.portrait.filename, @user.portrait if @user.portrait.attached? %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
